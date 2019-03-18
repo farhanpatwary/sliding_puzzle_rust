@@ -13,9 +13,11 @@ license = "MIT"
 lehmer = "2.0.0"
 rand = "0.4.2"
 bit-set = "0.4.0"
+sob = {path = "src/sob"}
 
 [dev-dependencies]
 bencher = "0.1.5"
+sob = {path = "src/sob"}
 
 [[bench]]
 name = "mod"

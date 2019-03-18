@@ -1,9 +1,9 @@
 extern crate sliding_puzzle;
 extern crate lehmer;
-extern crate bit_set;
+extern crate sob;
 
 use sliding_puzzle::*;
-use bit_set::BitSet;
+use sob::Sob;
 use lehmer::Lehmer;
 use std::collections::VecDeque;
 
@@ -18,7 +18,7 @@ fn main() {
     println!("\nestimated memory requirement: {:.3} GB", memory);
     println!("estimated compute time: {:.2} minutes\n", time);
 
-    let mut seen = BitSet::with_capacity(max as usize);
+    let mut seen = Sob::with_capacity(max as usize);
     let mut queue = VecDeque::<(u64, Direction)>::new();
     let mut next_queue = VecDeque::<(u64, Direction)>::new();
     let mut depth = -1;
